@@ -1,88 +1,163 @@
 # Context_OS
 
-A second brain for anyone who works with an AI assistant every day.
-It’s not a note-taking system for you: it’s the file system that **your assistant reads by itself**, before answering, in every new session.
+*The memory the AI reads by itself.*
+
+Open a chat. The AI doesn't know who you are, what you're working on, what you decided yesterday. You explain everything again. Tomorrow you start over.
+
+The more projects you run in parallel, the more this costs: time, tokens, and decisions that get lost because they stayed inside a closed conversation.
+
+Context_OS is the folder **the AI reads by itself**, before it answers, in every new session — not another note-taking app that you read.
 
 ---
-
-## The problem
-
-You open a chat. The assistant doesn’t know who you are, what you’re working on, or what you decided yesterday. You explain everything again. Tomorrow you start over.
-The more projects you have in parallel, the more this costs: time, tokens, and decisions that get lost because they stayed inside a closed conversation.
 
 ## The proof
 
-You install the system, open a conversation and write “hello”. It asks you three questions, fills in the state, and you’re up and running.
-Then you close the chat. You open a new one, days later:
+Install the system, open a conversation and write "hi". It asks you three questions, fills in the state, and you're up and running.
+
+Then close the chat. Open a new one, days later:
 
 ![A new session that already knows where you left off](claudescreen.png)
 
-You didn’t tell it anything. It read it.
+You didn't tell it anything. It read it.
+
+If you'd rather watch it than read it:
+
+
+https://github.com/user-attachments/assets/8a540cde-2ba5-4c79-a5e2-b9f745ce48b7
+
+
+I ask for the status, I work, I open another chat: it's already updated. Nobody told it anything.
 
 ---
 
-## What it is, concretely
+## What it actually is
 
-A folder of markdown files. No database, no account, no subscription, nothing running in the cloud. It opens with any editor, and with Obsidian you can also see the connections in a graph.
+A folder of markdown files. No database, no account, no subscription, nothing running in the cloud. Opens in any editor, and with Obsidian you can even see the links as a graph.
+
 Inside there are three things:
-**The rules** (`CLAUDE.md`) — what the assistant must do and where it should look. It’s the file that gets read first, automatically.
-**The state** (`memory.md`) — who you are, what you’re doing, what’s pending. It changes continuously.
-**The procedures** (`03_skills/`) — seven repeatable tasks the assistant knows how to perform: open a project, digest raw notes into linked notes, check that the system hasn’t broken, distill a skill into a file that can be recalled.
-The rule that holds everything together: **the rules never contain state.** A file that says “the active project is X” goes stale in two days. The rules point to the state, they don’t copy it.
+
+**The rules** (`CLAUDE.md`) — what the assistant should do and where it should look. It's the file read first, automatically.
+
+**The state** (`memory.md`) — who you are, what you're working on, what's pending. Changes constantly.
+
+**The procedures** (`03_skills/`) — seven repeatable tasks the assistant knows how to run: opening a project, digesting raw notes into linked notes, checking that the system hasn't broken, distilling a competence into a file to call up later.
+
+The rule that holds it all together: **rules never contain state.** A file that says "the active project is X" is stale in two days. Rules point to state, they never copy it.
 
 ---
 
-## How to get started
+## How to start
 
 1. Download the folder and put it wherever you want on your computer.
-2. Connect it to your assistant (in Claude: select it as the working folder).
+2. Connect it to your AI (in Claude: select it as your working folder).
 3. Open a conversation and write anything.
-The system notices on its own that it’s empty and asks you three questions. From there it’s operational.
-The procedures in `03_skills/` work better if you load them as skills (Settings → Skills, one file at a time): that way they activate automatically when needed. The assistant will suggest this during the first startup.
+
+The system notices on its own that it's empty and asks you three questions. From there, you're up and running.
+
+The procedures in `03_skills/` work best if you load them as skills (Settings → Skills, one file at a time): that way they trigger themselves when needed. The assistant will offer to do this during first run.
 
 ---
 
-## What’s inside
+## What's inside
 
 ```
-CLAUDE.md          rules + navigation map
-memory.md          current state
-archive.md         superseded decisions
-00_context/        identity, distilled skills, feedback log
-01_raw/            raw notes waiting to be digested
-02_wiki/           consolidated knowledge, in linked atomic notes
-03_skills/         the seven procedures
-10_projects/       one folder per project
-99_system/         the rules manual and the templates
+CLAUDE.md            rules + navigation map
+memory.md            current state
+archive.md           superseded decisions
+00_context/          identity, distilled skills, feedback log
+01_raw/              raw notes waiting to be digested
+02_wiki/             consolidated knowledge, in linked atomic notes
+03_skills/           the seven procedures
+10_projects/         one folder per project
+99_system/           the rulebook and templates
 ```
 
 ---
 
-## What it doesn’t do
-It doesn’t sync itself across devices: it’s a folder, use whatever sync tool you prefer.
-It doesn’t automatically import the notes you already have elsewhere. You put them in `01_raw/` and have them digested when you want.
-It’s not designed for multiple people on the same system: it’s personal.
-It was born and tested on Claude. Being text files with instructions in natural language, it works in principle with any assistant that can read and write files — but it has only been verified on Claude.
+## The procedures
+
+| Procedure | What it does | Benefit |
+|---|---|---|
+| Onboarding | Triggers itself on first run: three questions, fills in `memory.md`, opens the first project. | From empty folder to working system in a few minutes, without reading a single line of documentation. |
+| Librarian | Turns the raw notes in `01_raw/` into linked atomic notes in the wiki, updates the indexes. | Chaotic accumulation stops being dead weight and becomes knowledge you can actually retrieve. |
+| Project Kick-off | Opens a new project: folder, rules, state, index entry. | No line of work is ever born orphaned or lost because it wasn't indexed. |
+| Knowledge Pill | Distils a recurring competence into an operational file to call up when needed. | Explain a skill once, call it up forever — you never re-explain it again. |
+| System Check | Checks for broken links, orphan files, stale paths, inconsistent naming and misaligned dates. | The system stays reliable over time instead of quietly degrading until you stumble on it by accident. |
+| Session Log | Closes a work session with a dated entry in the log. | Decisions and corrections don't vanish when you close the chat: they stay written, not left to memory. |
+| System Feedback | Fixes a rule at the source when you flag a structural problem. | The system learns from your corrections in the same interaction, instead of making you repeat them next week. |
+
+Onboarding triggers itself on the first message. The other six load as skills (Settings → Skills, one file at a time) and trigger themselves whenever the context calls for it.
 
 ---
 
-## FAQ
-**How is it different from a note template?**
-Those you read yourself. This one the assistant reads, by itself, every time.
+## What it doesn't do
+
+It doesn't sync itself across devices: it's a folder, use whatever sync tool you prefer.
+
+It doesn't automatically import notes you already have elsewhere. You drop them in `01_raw/` and have them digested whenever you want.
+
+It's not built for several people on the same system: it's personal.
+
+It was built and tested on Claude Cowork. Being plain text files with natural-language instructions, it works in principle with any AI that can read and write files — but it's only been verified on Claude Cowork.
+
+---
+
+## How it compares
+
+| | Context_OS | Native memory (ChatGPT/Claude) | Notion templates (PARA/GTD) |
+|---|---|---|---|
+| Who reads what | The agent, alone, with an explicit map | The agent, but it decides what to keep — you don't see it | You, by hand |
+| Where the data lives | Your files, on your disk | Inside the product's account | Inside Notion |
+| Updates itself | Yes, with rules you write | Yes, opaquely | No |
+| If you switch assistants | The folder works anywhere that reads text | Stays locked to the product | Stays locked to Notion |
+
+It doesn't compete on how much it remembers: it competes on what you can see, control and take with you. The pattern it uses — a single index plus atomic notes, always read first — is also the setup most cited by the AI-agent community as the one that actually works without turning into a second job.
+
+---
+
+## The techniques it uses
+
+- **Single source of truth** — every fact lives in exactly one file. Every other level holds a pointer, never a copy.
+- **Router first** — `CLAUDE.md` never holds state, only rules and the map to reach it. It stays small and stable while everything else changes.
+- **Three levels, not one** — router → category index → file. The AI reads only what it needs, never the whole folder.
+- **Search before you read** — never a blanket scan: find what's relevant first, then read only that.
+- **Compress, don't accumulate** — every work session closes with 1-2 dense lines in the log, not the full chat history.
+- **Recurring cleanup** — broken links, orphan files, outdated paths: a dedicated check catches them before they pile up silently.
+- **State, rules and history kept apart** — what's true now (`memory.md`), what's always true (`CLAUDE.md`), what's no longer true (`archive.md`) never mix.
+
+---
+
+## Questions
+
+**Is it different from a note-taking template?**
+Those you read. This one the AI reads, by itself, every time.
 
 **Do I need to know how to code?**
-No. You read and write markdown.
+No. It's just reading and writing markdown.
 
-**Where do my data end up?**
-On your computer. The system doesn’t send anything anywhere.
+**Where does my data go?**
+On your computer. The system doesn't send anything anywhere.
 
-**Does it consume more tokens?**
-Less. The map in `CLAUDE.md` prevents the assistant from reading everything just to find one thing.
+**Does it use more tokens?**
+Much less, and it's measurable: the vault I use every day is today ~400,000 words across 290 files. A typical session, guided by the router, reads 2,000-3,000 of them — under 1% of the total. The bigger the vault grows, the bigger the gap: without a map, orienting yourself would only get more expensive.
 
-**What happens if I don’t follow the rules?**
-Nothing breaks. You lose order, not data: they’re your files.
+**What happens if I don't follow the rules?**
+Nothing breaks. You lose order, not data: they're your files.
 
 ---
 
-## License
-MIT.
+## What's next
+
+Ideas under evaluation, not promises:
+
+- A version for teams sharing folders in the cloud, so nobody works off a stale copy and the system stays current for everyone.
+- A best-practices file to help onboard the user further.
+- Automatic flagging of notes that haven't been read in months.
+
+---
+
+## Feedback
+
+Any feedback is welcome: criticism, ideas, cases the system doesn't cover.
+
+I'm happy to help at any time: I want this to actually be useful to whoever uses it, not just to me — write to me anytime, for anything.
