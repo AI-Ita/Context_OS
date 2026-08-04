@@ -5,8 +5,8 @@
 
 ## Procedures
 
-- **[onboarding-procedure.md](onboarding-procedure.md)** — first run: three-question interview, fills in `memory.md`, opens the first project. It is triggered by the first-run rule in `CLAUDE.md` while the system is still empty: the only one that is not loaded as a skill.
-- **[librarian-procedure.md](librarian-procedure.md)** — digests `01_raw/` into atomic notes in the wiki, updates the indexes, archives the originals in `_processed/` and flags contradictions instead of overwriting.
+- **[onboarding-procedure.md](onboarding-procedure.md)** — first run: leads 3+1 questions, fills in `memory.md`, opens the first project. It is triggered by the first-run rule in `CLAUDE.md` while the system is still empty: the only one that is not loaded as a skill.
+- **[librarian-procedure.md](librarian-procedure.md)** — sorts `01_raw/` between knowledge and projects: atomic notes in the wiki, folders and state in `10_projects/`, indexes updated, originals archived in `_processed/` and contradictions flagged instead of overwritten.
 - **[project-kickoff-procedure.md](project-kickoff-procedure.md)** — opens a new project: folder, `CLAUDE.md`, `memory.md`, row in the active projects table and entry in the index.
 - **[knowledge-pill-procedure.md](knowledge-pill-procedure.md)** — distils a recurring competence into an operational file to call up, saved in `00_context/knowledge_pills/`.
 - **[system-check-procedure.md](system-check-procedure.md)** — mechanical checks on the system: broken links, orphan files, stale paths, naming, date discrepancies.

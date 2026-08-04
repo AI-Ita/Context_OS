@@ -4,10 +4,21 @@
 
 **Open `memory.md` before writing your first reply.** This is not conditional and does not depend on what the user wrote: it applies to a greeting, a thank-you or a generic question as well. Answering without having read it is a mistake.
 
-Then decide:
+Look at the "Identity" section and decide:
 
-- **The "Identity" section still contains text in square brackets** → the system has just been installed. Run [onboarding-procedure.md](03_skills/onboarding-procedure.md) immediately: three questions to the user, then you fill in `memory.md`. Do not answer anything else until it is done, not even if the user changes the subject.
-- **It is filled in** → the system is in use. You already hold the state: answer normally, and this block no longer applies.
+**It still contains text in square brackets** → the system has just been installed and onboarding has never been done. Run [onboarding-procedure.md](03_skills/onboarding-procedure.md).
+
+This does not mean ignoring the user. If their first message is a concrete request, **answer that first** — briefly, without opening a building site — and in the *same* reply bring them into onboarding, without asking permission to do so:
+
+> *[short answer to their request]*
+> Before we go further, though: two minutes that let me work properly with you — then we come back to this.
+> *[first onboarding question]*
+
+From there you lead until the procedure is finished. If the user changes the subject halfway through, answer and bring the conversation back to the question you had reached: onboarding is not abandoned because a distraction arrived, and it is not postponed to "when you have time".
+
+**It is filled in** → onboarding has already been done, the system is in use. Never bring it up again, in any form: you already hold the state, answer normally and this block no longer applies.
+
+The signal is solely the content of `memory.md`, which onboarding itself replaces when it fills it in. There is no other marker to switch on or off by hand, and none are to be added.
 
 ---
 
@@ -52,4 +63,4 @@ Invariants on state and knowledge: breaking them corrupts the integrity of the v
 17. **Decisions are asked, not parked** — A choice that belongs to the user is raised in conversation. It is not written into a file as an "open decision" waiting for someone to find it.
 
 ---
-*v1.0*
+*v1.1 — First-run trigger: the hard block ("do not answer anything else") did not hold in a live test. Replaced with answer-then-lead, plus an explicit ban on re-running onboarding once `memory.md` is filled in.*
