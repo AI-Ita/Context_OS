@@ -28,7 +28,7 @@ Root holds governance only: no operational work. Every project in `10_projects/`
 |---|---|---|
 | `CLAUDE.md` | rules, router, scope | almost never |
 | `memory.md` | current state, open threads, next step | constantly |
-| `archive.md` | what has been replaced, with a date | additions only |
+| `archive.md` | what has been replaced, with a date | additions only, at the top |
 
 - Rules never hold state: if a statement can go stale, it belongs in `memory.md` and the router points at it.
 - `archive.md` only receives information leaving a `memory.md` because it was replaced. It is not a maintenance log.

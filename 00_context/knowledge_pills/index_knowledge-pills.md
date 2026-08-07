@@ -1,6 +1,6 @@
 # knowledge pills — index
 
-> Competences distilled into dense, operational files, to be called up in a session when they are needed. Created with `03_skills/knowledge-pill-procedure.md`.
+> Competences distilled into dense, operational files, to be called up in a session when they are needed. Created with `03_skills/knowledge-pill/SKILL.md`.
 
 ## Pills
 

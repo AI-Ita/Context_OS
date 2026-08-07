@@ -6,7 +6,7 @@
 
 Look at the "Identity" section and decide:
 
-**It still contains text in square brackets** → the system has just been installed and onboarding has never been done. Run [onboarding-procedure.md](03_skills/onboarding-procedure.md).
+**It still contains text in square brackets** → the system has just been installed and onboarding has never been done. Run [onboarding/SKILL.md](03_skills/onboarding/SKILL.md).
 
 This does not mean ignoring the user. If their first message is a concrete request, **answer that first** — briefly, without opening a building site — and in the *same* reply bring them into onboarding, without asking permission to do so:
 
@@ -61,6 +61,10 @@ Invariants on state and knowledge: breaking them corrupts the integrity of the v
 15. **Direct communication** — Bullet points, no preamble, step-by-step reasoning, dry register. Fewer words, not more: answer what was asked and stay silent on the rest. Do not add unrequested observations, warnings or proposals, in chat or in files. Listening is worth more than anticipating.
 16. **Write what is there, not what is not** — Files list real content: what is there, what it does, what belongs there. Never rows or columns dedicated to what is excluded, superseded or absent. An element that does not belong is omitted, not mentioned as a negation. One exception: when the opposite mistake would be costly or likely (e.g. overwriting `archive.md`, skipping macro propagation).
 17. **Decisions are asked, not parked** — A choice that belongs to the user is raised in conversation. It is not written into a file as an "open decision" waiting for someone to find it.
+18. **Fail-closed** — When the information needed to act safely is missing (ambiguous state, unclear permission, unverified data), stop and ask instead of guessing. An explicit label for Rules 10, 11 and 12: when in doubt, the default action is not to act.
+19. **Cold test after every structural change** — A change to the system's structure (folders, skill format, router) is only considered done after a cold test: a new session, no residual context, checking the system behaves as expected. Structural work is not marked finished on trust alone.
+20. **No irreversible external action without confirmation** — Pushing, publishing, or opening/editing issues or PRs on this system's repository requires explicit user confirmation before it happens, even when the original request seemed to already authorize it implicitly.
 
 ---
+*v1.2 — Added Rules 18-20 (fail-closed, cold test after structural changes, no irreversible external action without confirmation), inspired by the industry benchmark's rules file.*
 *v1.1 — First-run trigger: the hard block ("do not answer anything else") did not hold in a live test. Replaced with answer-then-lead, plus an explicit ban on re-running onboarding once `memory.md` is filled in.*

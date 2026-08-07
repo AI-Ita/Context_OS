@@ -5,7 +5,7 @@
 
 ## Subfolders
 
-- **[knowledge_pills/](knowledge_pills/index_knowledge-pills.md)** — "cartridges": dense, operational files on a single topic, to be called up when that competence is needed. Created with `03_skills/knowledge-pill-procedure.md`.
+- **[knowledge_pills/](knowledge_pills/index_knowledge-pills.md)** — "cartridges": dense, operational files on a single topic, to be called up when that competence is needed. Created with `03_skills/knowledge-pill/SKILL.md`.
 - **dump/** — self-improvement log: feedback and corrections on how the AI should work with you. One file per month (`YYYY-MM.md`).
 
 ---

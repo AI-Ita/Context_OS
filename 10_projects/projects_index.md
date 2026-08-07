@@ -7,4 +7,4 @@
 *(One entry per project, added at kick-off. Format: `- **[name/](name/CLAUDE.md)** — one line on what it does.`)*
 
 ---
-*A new project is opened with `03_skills/project-kickoff-procedure.md`.*
+*A new project is opened with `03_skills/project-kickoff/SKILL.md`.*
