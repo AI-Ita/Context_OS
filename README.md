@@ -37,7 +37,9 @@ Then close the chat. Open a new one, days later:
 
 You didn't tell it anything. It read it.
 
-If you'd rather watch it than read it: [watch the demo](assets/Context_OS-v1.0.mp4).
+If you'd rather watch it than read it: 
+
+https://github.com/user-attachments/assets/8a540cde-2ba5-4c79-a5e2-b9f745ce48b7
 
 I ask for the status, I work, I open another chat: it's already updated. Nobody told it anything.
 
